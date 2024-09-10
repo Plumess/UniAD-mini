@@ -2,6 +2,8 @@ https://github.com/OpenDriveLab/UniAD
 
 ### 数据集准备及训练说明
 
+[模型以及info下载 Google Drive](https://drive.google.com/drive/folders/1ik1MAnYm4iwZSSF4juPBDIEXLeSOXY8d?usp=sharing)
+
 [nuScenes数据集说明](docs/nuScenes数据集说明.md)
 
 [数据集准备](docs/PrepareDatasets.md)
