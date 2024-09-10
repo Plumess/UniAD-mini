@@ -1,0 +1,9 @@
+__pycache__
+*.pkl
+*.pth
+*.pyc
+/UniAD/output/official/*.jpg
+logs/*
+.vscode/*
+/UniAD/.dist_test/*
+/UniAD/sources/*.png

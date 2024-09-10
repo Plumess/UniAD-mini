@@ -1,0 +1,22 @@
+services:
+  uniad:
+    image: uniad
+    container_name: uniad
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: final  # 指定目标阶段
+    volumes:
+      - ./UniAD:/UniAD
+      - ./UniAD/data/nuscenes:/UniAD/data/nuscenes
+      - ./UniAD/data/infos:/UniAD/data/infos
+      - ./UniAD/ckpts:/UniAD/ckpts
+      - ./UniAD/others:/UniAD/others
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=0,1,2,3
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility,video
+      - DEBIAN_FRONTEND=noninteractive
+      - ENV TZ=Europe/Stockholm
+    runtime: nvidia
+    shm_size: '64gb'
+    tty: true  # 分配伪终端，保持容器运行并方便调试
